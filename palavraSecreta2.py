@@ -1,6 +1,6 @@
 palavraSecreta = 'programador'.upper()
 listaLetrasDigitadas = []
-listaLetrasDigitadasErradas = []
+listaLetrasRepetidas = []
 contador = 7
 
 while True:
@@ -16,7 +16,7 @@ while True:
 
     listaLetrasDigitadas.append(letraDigitada)
 
-    if letraDigitada in listaLetrasDigitadasErradas:
+    if letraDigitada in listaLetrasRepetidas:
         print(f'\n*** Opa opa, vc já digitou a letra {letraDigitada}. Digite outra letra.')
         continue
 
@@ -28,7 +28,7 @@ while True:
         listaLetrasDigitadas.pop()
         contador -= 1
 
-    listaLetrasDigitadasErradas.append(letraDigitada)
+    listaLetrasRepetidas.append(letraDigitada)
 
     palavraSecretaTemp = ''
 
